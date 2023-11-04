@@ -4,7 +4,9 @@ if getgenv().Key then
     local check = phpScriptUrl .. "?Key=" .. getgenv().Key
     local result = game:HttpGet(check)
 
-    if result then
+    local keyInPhpScript = string.match(result, 'local%s*key')
+
+    if keyInPhpScript then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
     else
         game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
