@@ -1,12 +1,7 @@
--- กำหนด URL ของสคริปต์
-local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
-
--- เรียกใช้งานฟังก์ชัน game:HttpGet เพื่อดึงโค้ดจาก URL
-local check = game:HttpGet(phpScriptUrl)
-
--- ตรวจสอบว่าค่าที่ดึงมาเท่ากับ "Key" หรือไม่
-if check == "Key" then
-    -- ถ้าเป็น "Key" ให้โหลดและ execute สคริปต์จาก URL อื่น
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
-    print("Key")
+local key = _G.Key
+local check = "?key=" .. key
+if game:HttpGet(check) == "Whitelisted" then
+loadstring(game:HttpGet("scripthere"))()
+else
+game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
 end
