@@ -1,7 +1,12 @@
-local key = _G.Key
-local check = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key?key=" .. key
-if game:HttpGet(check) == "Whitelisted" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
+if _G.Key then
+    local check = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key?key=" .. _G.Key
+    local result = game:HttpGet(check)
+
+    if result and result == "Whitelisted" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
+    else
+        game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
+    end
 else
-game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
+    warn("Key not defined!")
 end
