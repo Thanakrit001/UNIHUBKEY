@@ -1,13 +1,1 @@
-<?php
-$keys = array(
-    "55555",
-    "55555"
-);
-
-$sub = $_GET["key"];
-if (in_array($sub, $keys, TRUE)) {
-    echo "Whitelisted";
-} else {
-    echo "Not Whitelisted";
-}
-?>
+Key = "55555"
