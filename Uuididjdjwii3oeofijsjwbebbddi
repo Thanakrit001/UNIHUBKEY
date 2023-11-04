@@ -6,7 +6,7 @@ end
 -- ตรวจสอบ key ใน Lua script
 local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
 
-local check = phpScriptUrl .. "?key=" .. getgenv().Key
+local check = phpScriptUrl .. "?Key=" .. getgenv().Key
 local result = game:HttpGet(check)
 
 if result == "true" then
