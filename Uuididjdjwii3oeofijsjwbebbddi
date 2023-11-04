@@ -1,5 +1,8 @@
+
+local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
+
 if _G.Key then
-    local check = "https://your-php-server.com/path-to-php-script.php?key=" .. _G.Key
+    local check = phpScriptUrl .. "?key=" .. _G.Key
     local result = game:HttpGet(check)
 
     if result and result == "Whitelisted" then
