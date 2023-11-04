@@ -1,12 +1,7 @@
--- ตรวจสอบว่า _G.Key ถูกกำหนดค่าหรือไม่
 if _G.Key then
-    -- กำหนด URL ที่ใช้ตรวจสอบ key
-    local check = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key?key=" .. _G.Key
-    
-    -- ดึงข้อมูลจากเซิร์ฟเวอร์
+    local check = "https://your-php-server.com/path-to-php-script.php?key=" .. _G.Key
     local result = game:HttpGet(check)
 
-    -- ตรวจสอบผลลัพธ์และทำการโหลดสคริปต์หาก key ถูกต้อง
     if result and result == "Whitelisted" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
     else
