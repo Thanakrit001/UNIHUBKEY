@@ -8,7 +8,5 @@ if getgenv().Key then
 
     if keyInPhpScript then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
-    else
-        
     end
 end
