@@ -5,7 +5,7 @@ local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/m
 local check = game:HttpGet(phpScriptUrl)
 
 -- ตรวจสอบว่าค่าที่ดึงมาเท่ากับ "Key" หรือไม่
-if check == "Key" then
+if check == "55555" then
     -- ถ้าเป็น "Key" ให้โหลดและ execute สคริปต์จาก URL อื่น
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
     print("Key")
