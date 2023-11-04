@@ -1,7 +1,7 @@
 <?php
 $keys = array(
     "55555",
-    "key1"
+    "55555"
 );
 
 $sub = $_GET["key"];
