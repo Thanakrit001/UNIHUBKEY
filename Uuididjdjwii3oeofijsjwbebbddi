@@ -1,14 +1,12 @@
--- ตรวจสอบว่า getgenv().Key ถูกกำหนดค่าหรือไม่
 if getgenv().Key then
+    -- ตรวจสอบ key ใน Lua script
+    local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
+    local check = phpScriptUrl .. "?Key=" .. getgenv().Key
+    local result = game:HttpGet(check)
 
--- ตรวจสอบ key ใน Lua script
-local phpScriptUrl = loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
-
-local check = phpScriptUrl .. "?Key=" .. getgenv().Key
-local result = game:HttpGet(check)
-
-if result == "true" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
-else
-    game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
+    if result == "true" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
+    else
+        game.Players.LocalPlayer:Kick("Invalid Key! Please Rejoin And Try Again.")
+    end
 end
