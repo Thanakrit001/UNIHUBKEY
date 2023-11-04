@@ -1,10 +1,12 @@
-if getgenv().Key then
-    -- ตรวจสอบ key ใน Lua script
-    local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
-    local check = game:HttpGet(phpScriptUrl)
+-- กำหนด URL ของสคริปต์
+local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
 
-    if check == "Key" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
-        print("Key")
-    end
+-- เรียกใช้งานฟังก์ชัน game:HttpGet เพื่อดึงโค้ดจาก URL
+local check = game:HttpGet(phpScriptUrl)
+
+-- ตรวจสอบว่าค่าที่ดึงมาเท่ากับ "Key" หรือไม่
+if check == "Key" then
+    -- ถ้าเป็น "Key" ให้โหลดและ execute สคริปต์จาก URL อื่น
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
+    print("Key")
 end
