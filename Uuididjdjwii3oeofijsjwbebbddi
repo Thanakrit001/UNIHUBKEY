@@ -1,10 +1,9 @@
 if getgenv().Key then
     -- ตรวจสอบ key ใน Lua script
-    local phpScriptUrl = https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key
-    local check = phpScriptUrl == "Key"
-    local result = game:HttpGet(check)
+    local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
+    local check = game:HttpGet(phpScriptUrl)
 
-    if result == "Key" then
+    if check == "Key" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNI-X-HUB/main/UNI%20X%20HUB"))()
     end
 end
