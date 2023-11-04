@@ -1,10 +1,8 @@
 -- ตรวจสอบว่า getgenv().Key ถูกกำหนดค่าหรือไม่
-if not getgenv().Key then
-    getgenv().Key = "YourDefaultKeyHere"
-end
+if getgenv().Key then
 
 -- ตรวจสอบ key ใน Lua script
-local phpScriptUrl = "https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
+local phpScriptUrl = loadstring(game:HttpGet("https://raw.githubusercontent.com/Thanakrit001/UNIHUBKEY/main/Key"
 
 local check = phpScriptUrl .. "?Key=" .. getgenv().Key
 local result = game:HttpGet(check)
