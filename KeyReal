@@ -13,5 +13,4 @@ local function CheckKey(playerKey)
     end
 end
 
-local userInputKey = "55555" -- ใส่ค่าทดสอบ
 CheckKey(userInputKey)
