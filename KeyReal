@@ -1,11 +1,15 @@
-Key = "55555" 
+local Key = {
+    "55555"
+}
 
 local function CheckKey(playerKey)
-    if playerKey == Key then
+    local keyString = table.concat(Key, "") 
+    if playerKey == keyString then
         print("Key ถูกต้อง")
     else
         print("Key ไม่ถูกต้อง")
-        local kickMessage = "คีย์ไม่ถูกโปรดตรวจสอบคีย์ให้ดี"
+        local kickMessage = "คีย์ไม่ถูก โปรดตรวจสอบคีย์ให้ดี"
+        print(kickMessage) -- ให้พิมพ์ kickMessage
     end
 end
 
