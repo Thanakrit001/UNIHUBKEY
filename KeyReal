@@ -3,7 +3,7 @@ local Key = {
 }
 
 local function CheckKey(playerKey)
-    local keyString = table.concat(Key, "") 
+    local keyString = table.concat(Key, "") -- เปลี่ยน table เป็น string
     if playerKey == keyString then
         print("Key ถูกต้อง")
     else
@@ -13,4 +13,5 @@ local function CheckKey(playerKey)
     end
 end
 
+local userInputKey = "55555" -- ใส่ค่าทดสอบ
 CheckKey(userInputKey)
