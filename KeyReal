@@ -1,4 +1,4 @@
-local Key = "55555" 
+Key = "55555" 
 
 local function CheckKey(playerKey)
     if playerKey == Key then
@@ -6,9 +6,6 @@ local function CheckKey(playerKey)
     else
         print("Key ไม่ถูกต้อง")
         local kickMessage = "คีย์ไม่ถูกโปรดตรวจสอบคีย์ให้ดี"
-    game.Players.LocalPlayer:Kick(kickMessage)
-    wait(5)
-    game:Shutdown()
     end
 end
 
